@@ -25,7 +25,7 @@ export const defaultConfig = {
     /**
      * The following configuration items can be set in a custom config, to override the default behaviour
      */
-    // buttonPrimaryTextColor: '#000', // Overrides the default color choosing of buttons
+    buttonPrimaryTextColor: '#fff', // Overrides the default color choosing of buttons
 };
 
 // overrideProp : fallbackProp
