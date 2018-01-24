@@ -51,7 +51,12 @@ const defaultConfig = {
     zIndexDropdownMenu: 420,
     zIndexFancySelectDropdown: 420,
     zIndexTooltip: 100,
-    zIndexSingleDatePickerOverlay: 100
+    zIndexSingleDatePickerOverlay: 100,
+
+    /**
+     * The following configuration items can be set in a custom config, to override the default behaviour
+     */
+    buttonPrimaryTextColor: '#fff' // Overrides the default color choosing of buttons
 };
 
 // overrideProp : fallbackProp
@@ -223,7 +228,7 @@ const Button = styled__default(props => React__default.createElement('button', O
         width: 100%;
     `, props => {
     const background = props.theme[`${props.tone || 'buttonPrimary'}Color`];
-    const textColor = getTextColor(props, background);
+    const textColor = props.theme[`${props.tone || 'buttonPrimary'}TextColor`] ? props.theme[`${props.tone || 'buttonPrimary'}TextColor`] : getTextColor(props, background);
 
     if (props.icon) {
         return `color: ${textColor};`;
