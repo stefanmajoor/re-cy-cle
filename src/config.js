@@ -21,6 +21,11 @@ export const defaultConfig = {
     zIndexFancySelectDropdown: 420,
     zIndexTooltip: 100,
     zIndexSingleDatePickerOverlay: 100,
+
+    /**
+     * The following configuration items can be set in a custom config, to override the default behaviour
+     */
+    // buttonPrimaryTextColor: '#000', // Overrides the default color choosing of buttons
 };
 
 // overrideProp : fallbackProp

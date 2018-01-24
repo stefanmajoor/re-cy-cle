@@ -78,7 +78,11 @@ export const Button = styled(props => (
     `};
     ${props => {
         const background = props.theme[`${props.tone || 'buttonPrimary'}Color`];
-        const textColor = getTextColor(props, background);
+        const textColor = props.theme[
+            `${props.tone || 'buttonPrimary'}TextColor`
+        ]
+            ? props.theme[`${props.tone || 'buttonPrimary'}TextColor`]
+            : getTextColor(props, background);
 
         if (props.icon) {
             return `color: ${textColor};`;
